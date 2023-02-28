@@ -6,21 +6,13 @@
 <body>
 
 <img src="image.jpg" alt="Trulli" width="990" height="1800">
-<audio id="myAudio" controls autoplay>
-  <source src="sound.mp3" type="audio/mpeg">
-</audio>
+
 
 <script>
- var source = "sound.mp3"
- var audio = document.createElement("audio");
- //
- audio.autoplay = true;
- //
- audio.load()
- audio.addEventListener("load", function() { 
-     audio.play(); 
- }, true);
- audio.src = source;
+document.addEventListener("DOMContentLoaded", function() {
+    var audio = new Audio('sound.mp3');
+    audio.play();
+});
 </script>
 </body>
 </html>

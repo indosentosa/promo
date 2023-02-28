@@ -4,25 +4,23 @@
   <title>Indosentosa Promo</title>
 </head>
 <body>
-
+    <div class="div1" onmousemove="playMusic()">
 <img src="image.jpg" alt="Trulli" width="990" height="1800">
-<iframe src="sound.mp3" allow="autoplay" style="display:none" id="iframeAudio">
-</iframe> 
-<audio autoplay loop  id="playAudio">
-    <source src="sound.mp3">
-</audio>
-
-<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-  if (!isChrome){
-      $('#iframeAudio').remove()
-  }
-  else {
-      $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
-  }
-});
-</script>
+  <audio id="divAudio">
+      <source src="sound.mp3" type="audio/mp3">
+    </audio>
+     </div>
+    <script>
+      var vAudio = document.getElementById("divAudio");
+      var hasInit = false;
+      function playMusic()
+      {
+        if(!hasInit)
+        {
+          hasInit = true;
+          vAudio.play();
+        }
+      }
+    </script>
 </body>
 </html>

@@ -5,11 +5,16 @@
 </head>
 <body>
 
-<img src="image.jpg" alt="Trulli" width="1000" height="2100">
-<audio controls autoplay>
+<img src="image.jpg" alt="Trulli" width="950" height="1900">
+<audio id="myAudio" controls autoplay>
   <source src="sound.mp3" type="audio/mpeg">
 </audio>
 
-
+<script>
+function myFunction() {
+  var x = document.getElementById("myAudio").autoplay;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
 </body>
 </html>
